@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : StampALike  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120528
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Express intern</title>
+    <link
+      href="http://fonts.googleapis.com/css?family=Arvo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Coda:400,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body>
+    <%- include('menu'); -%>
+
+    <div id="wrapper">
+      <!-- end #header -->
+      <div id="page-bgtop"></div>
+      <div id="page">
+        <div>
+          <img src="images/pics01.jpg" width="920" height="300" alt="" />
+        </div>
+
+        <div id="content">
+          <div class="post">
+            <h2 class="title">
+              <a href="#">Form</a>
+            </h2>
+            <div style="clear: both">&nbsp;</div>
+            <div class="entry">
+              <form action="/form-process" method="post">
+                <table>
+                  <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td>Recovery Email</td>
+                    <td>
+                      <input type="email" name="recoveryEmail" required />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Mobile number</td>
+                    <td>
+                      <input type="number" name="mobile" required />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td>Subject 1</td>
+                    <td><input type="number" name="sub1" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td>Subject 2</td>
+                    <td><input type="number" name="sub2" required /></td>
+                  </tr>
+
+                  <tr></tr>
+                  <tr>
+                    <td>Subject 3</td>
+                    <td><input type="number" name="sub3" required /></td>
+                  </tr>
+
+                  <tr></tr>
+                  <tr>
+                    <td>Subject 4</td>
+                    <td><input type="number" name="sub4" required /></td>
+                  </tr>
+
+                  <tr>
+                    <td><input type="submit" /></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+          <div style="clear: both">&nbsp;</div>
+        </div>
+        <!-- end #content -->
+        <%- include('sidebar'); -%>
+        <!-- end #sidebar -->
+        <div style="clear: both">&nbsp;</div>
+      </div>
+      <div id="page-bgbtm"></div>
+      <!-- end #page -->
+    </div>
+    <%- include('footer'); -%>
+    <!-- end #footer -->
+  </body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Form</h1>
+    <form action="/form-process" method="post">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" name="name" required /></td>
+        </tr>
+
+        <tr>
+          <td>Age</td>
+          <td><input type="number" name="age" required /></td>
+        </tr>
+
+        <tr>
+          <td>Science</td>
+          <td><input type="number" name="science" required /></td>
+        </tr>
+
+        <tr>
+          <td>Maths</td>
+          <td><input type="number" name="maths" required /></td>
+        </tr>
+
+        <tr>
+          <td><input type="submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html> -->
