@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Products data</title>
+  </head>
+  <body>
+    <h1>Display</h1>
+    <a href="/products/add">Add Record</a>
+    <% if(row.length > 0){ %>
+    <br />
+    Number of records: <%= row.length %>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+      <% for(var i=0; i < row.length ; i++){ %>
+      <tr>
+        <td><%= row[i].product_id %></td>
+        <td><%= row[i].product_name %></td>
+        <td><%= row[i].product_details %></td>
+        <td><%= row[i].product_price %></td>
+        <td>
+          <a href="/products/edit/<%= row[i].product_id %>">Edit</a>
+          |
+          <a href="/products/delete/<%= row[i].product_id %>">Delete</a>
+        </td>
+      </tr>
+      <%}%>
+    </table>
+    <%}else{%>
+    <p>No Data Found</p>
+    <% } %>
+  </body>
+</html>

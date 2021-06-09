@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Products data</title>
+  </head>
+  <body>
+    <h1>Add Product data</h1>
+    <a href="/products/display">Display records</a>
+    <br />
+    <form method="POST" action="/products/add-process">
+      Name : <input type="text" name="name" required />
+      <br />
+      Details :<input type="text" name="details" required />
+      <br />
+      Price : <input type="number" name="price" required />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

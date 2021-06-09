@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Products data</title>
+  </head>
+  <body>
+    <h1>Edit data</h1>
+    <form method="POST">
+      Name :
+      <input type="text" name="name" value="<%= row.product_name %>" required />
+      <br />
+      Details :<input
+        type="text"
+        name="details"
+        value="<%= row.product_details %>"
+        required
+      />
+      <br />
+      Price :
+      <input
+        type="number"
+        name="price"
+        value="<%= row.product_price %>"
+        required
+      />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

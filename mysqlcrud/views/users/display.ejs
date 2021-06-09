@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Users data</title>
+  </head>
+  <body>
+    <h1>Display</h1>
+    <a href="/users/add">Add Record</a>
+    <% if(row.length > 0){ %>
+    <br />
+    Number of records: <%= row.length %>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+      <% for(var i=0; i < row.length ; i++){ %>
+      <tr>
+        <td><%= row[i].user_id %></td>
+        <td><%= row[i].user_name %></td>
+        <td><%= row[i].user_email %></td>
+        <td><%= row[i].user_mobile %></td>
+        <td><%= row[i].user_password %></td>
+        <td><%= row[i].user_age %></td>
+        <td><%= row[i].user_address %></td>
+        <td>
+          <a href="/users/edit/<%= row[i].user_id %>">Edit</a>
+          |
+          <a href="/users/delete/<%= row[i].user_id %>">Delete</a>
+        </td>
+      </tr>
+      <%}%>
+    </table>
+    <%}else{%>
+    <p>No Data Found</p>
+    <% } %>
+  </body>
+</html>
