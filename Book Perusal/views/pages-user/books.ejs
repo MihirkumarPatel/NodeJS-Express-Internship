@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Book Persual - Books</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="/assets/css/owl.css" />
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <%- include('../parts-user/preload'); -%>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <%- include('../parts-user/header'); -%>
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>new arrivals</h4>
+              <h2>Books</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters-content">
+              <div class="row grid">
+                <% if(db_book.length > 0){ %>
+                  <% for(var i = 0 ; i < db_book.length ; i++){ %>
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <a href="/users/stores/<%= db_book[i].book_name %>">
+                          <img src="/assets/images/book.png" alt=""/>
+                        </a>
+                        <div class="down-content">
+                          <a href="/users/stores/<%= db_book[i].book_name %>">
+                            <h4><%= db_book[i].book_name %></h4>
+                          </a>
+                          <!-- <h6>Rs.<%= db_book[i].book_price %></h6> -->
+                          <p>
+                            <%= db_book[i].book_description %>
+                          </p>
+                          <br>
+                          <span>
+                          <a href="/users/stores/<%= db_book[i].book_name %>" class="filled-button">
+                            <!-- <span> -->
+                              I Want this book...
+                            <!-- </span> -->
+                          </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  <% } %>                
+                <% }else{ %>
+                  No Books Found at the moment...
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../parts-user/footer'); -%> 
+    <%- include('../parts-user/script'); -%>
+    </script>
+  </body>
+</html>
