@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Book Perusal - My Store</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="/assets/css/owl.css" />
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <%- include('../parts-user/preload'); -%>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <%- include('../parts-user/header'); -%>
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <!-- <h4>new arrivals</h4> -->
+              <h2>My Store</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="best-features">
+      <div class="container">
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-6"> -->
+            <div class="left-content">
+                <a href="/users/mystore/add-book" class="filled-button">Add Books</a>
+            </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters-content">
+              <div class="row grid">
+                <% if(stores.length > 0){ %>
+                  <% for(var i = 0 ; i < stores.length ; i++){ %>
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <a href="">
+                          <img src="/assets/images/store.jpg" alt=""/>
+                        </a>
+                        <div class="down-content">
+                          <a href="">
+                            <h4><%= stores[i].book_name %></h4>
+                          </a>
+                          <h6>Rs.<%= stores[i].book_price %></h6>
+                          <p>
+                            Store Name: <%= stores[i].store_name %> <br>
+                            Contact: <%= stores[i].store_contact %> <br>
+                            Address: <%= stores[i].store_address %> <br>
+                            <%= stores[i].store_description %> <br>
+                            Available Quantity: <%= stores[i].book_count %>
+                          </p>
+                          <br>
+                          <span>
+                            <a href="/users/mystore/edit/<%= stores[i].store_id %>" class="filled-button">edit</a>
+                            |
+                            <a href="/users/mystore/delete/<%= stores[i].store_id %>" class="filled-button">delete</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  <% } %>                
+                <% }else{ %>
+                  No Stores Found at the moment...
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../parts-user/footer'); -%> 
+    <%- include('../parts-user/script'); -%>
+    </script>
+  </body>
+</html>

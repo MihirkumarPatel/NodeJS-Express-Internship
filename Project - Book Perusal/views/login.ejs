@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Book Perusal - Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <%- include('parts-index/preload'); -%>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <%- include('parts-index/header'); -%>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h4>Best Offer</h4>
+            <h2>New Arrivals On Sale</h2>
+          </div>
+        </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Flash Deals</h4>
+            <h2>Get your best products</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Last Minute</h4>
+            <h2>Grab last minute deals</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Login</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Fill up the Details</h4>
+              <form action="/login-process" method="POST">
+                <table>
+                  <tr>
+                    <td>E-Mail</td>
+                    <td><input type="email" name="email" required /></td>
+                  </tr>
+                  <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required /></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" class="filled-button" />
+                    </td>
+                  </tr>
+                </table>
+                <!-- <a href="" class="filled-button"><input type="submit" />Log</a>
+                <a href="" class="filled-button">Log In</a> -->
+                <!-- <button class="filled-button" type="submit">Enter</button> -->
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="assets/images/feature-image.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Itaque corporis amet elite author nulla.
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="filled-button">Purchase Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('parts-index/footer'); -%> <%- include('parts-index/script');
+    -%>
+  </body>
+</html>
